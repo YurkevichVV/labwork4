@@ -3,11 +3,27 @@
 using namespace std;
 
 int find_right_number(int a);
+const int N=4;
+void OutputArray (int A[][N], int n, int m)
+{
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<m; j++)
+        {
+            cout.width(6);
+            cout<<A[i][j];
+            cout.width(6);
+        }
+        cout<<endl;
+    }
+}
 
 int main()
 {
   const  int n=3, m=4;
   int A[n][m]={{118,30,39,8},{5,67,9,3},{2,34,6,78}};
+    cout<<"Array A: "<<endl;
+    OutputArray (A, n, m);
   int sum = 0;
      for(int i = 0; i < n; i++)
      {
